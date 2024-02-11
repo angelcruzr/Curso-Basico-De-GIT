@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Básico De Git</title>
+        <meta name="description" content="Tutorial de Git desde cero para principiantes, usando 
+            la terminal Git Bash. Aprende los comandos más básicos para inicializar tus propios repositorios." />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="header--nav">
+                <ul class="primary--nav">
+                    <li class="primary--nav__item">
+                        <a href="#parte-1">Parte 1</a>
+                    </li>
+                    <li class="primary--nav__item">
+                        <a href="#parte-2">Parte 2</a>
+                    </li>
+                    <li class="primary--nav__item">
+                        <a href="#parte-3">Parte 3</a>
+                    </li>
+                    <li class="primary--nav__item">
+                        <a href="#final">Final</a>
+                    </li>
+                </ul>
+                <div class="theme-div" id="theme-switch-container">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </nav>
+            <section class="title-section">
+                <article class='hero-text'>
+                    <h1 class="titulo">Tutorial De Git, Nivel Básico</h1>
+                    <p class="intro">Aprende todos los comandos y acciones indispensables para trabajar con el
+                        mejor y, por lo menos, más usado Sistema de Control de Versiones
+                    </p>
+                </article>
+                <article>    
+                    <div class="logo-git-hero">
+                        <img class="logo-git-hero-img" src="./imagenes/Git-Logo-White.png"
+                            alt="Logo oficial de Git naranja con el nombre" />
+                    </div>
+                </article>    
+            </section>
+        </header>
+        <main>
+            <section class="section">
+                <p class="definicion dark-mode-p">Las aplicaciones que usaremos durante este
+                    tutorial son la terminal de comandos <strong class="strong clear-blue">Git Bash</strong> y 
+                    el editor de código <strong class="strong clear-blue">Visual Studio Code</strong>.
+                    Con paciencia y constancia comprobarás tus progresos en el conocimiento y manejo
+                    de Git.
+                </p>
+                <img class="img-s" src="./imagenes/Logo-Naranja-Git.png"
+                    alt="Logo oficial de Git Color Naranja" />
+                <p class="definicion dark-mode-p dark-mode-p">Espero que te lo pases bien
+                    aprendiendo esta herramienta tan importante y usada por la mayoría de
+                    profesionales
+                    del mundo de la programación y también por aprendices autodidactas, como yo
+                    mismo.
+                </p>
+            </section>
+            <section id="parte-1" class="section">
+                <h2 class="h2"><span>Parte 1</span><br>Comandos Imprescindibles Para Comenzar</h2>
+                <p class="definicion dark-mode-p">Primero, abre <span class="resaltar dark-blue">Git
+                    Bash</span>. Si la instalación de Git se ha completado satisfactoriamente, busca abajo 
+                    y a la izquierda de tu ordenador y situa el mouse encima del icono de Windows (
+                    si tienes su sistema operativo instalado en tu pc).
+                </p>
+                <p class="definicion dark-mode-p">Busca la carpeta "Git". Para tenerlo a mano tienes la 
+                    opción de anclarlo en la barra de tareas.
+                </p>
+                <article class="article">
+                    <h3 class="h3">Configurar Datos Personales: Nombre y E-mail</h3>
+                    <p class="definicion dark-mode-p">Sin un nombre de usuario y sin una dirección
+                        de correo electrónico, Git no nos dejará inicializar
+                        repositorios para nuestros proyectos.
+                    </p>
+                    <h4 class="h4 clear-blue">Configurar Nombre De Usuario</h4>
+                    <p class="definicion dark-mode-p">Aquí te muestro cómo escribir el comando para
+                        crear el nombre de usuario.
+                        El símbolo <strong class="strong clear-blue">$</strong> ya está escrito por
+                        defecto en la terminal de Git Bash.
+                    </p>
+                    <p class="definicion dark-mode-p">Para escribir texto con espacios, para crear carpetas 
+                        y nombre de usuario, es necesario envolverlo entre comillas para no provocar un error. 
+                    </p>    
+                    <p class="definicion dark-mode-p">Copia los códigos que necesites y deja solo un
+                        '$' a la izquierda:
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="comando">$ git config --global user.name "Nombre Usuario"</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Con <strong class="strong clear-blue">git
+                            config --global</strong> especificamos que los proyectos
+                        que tengamos guardados en nuestro ordenador o Pc estarán accesibles para que
+                        <em>cualquier usuario</em> pueda trabajar con Git desde dicho dispositivo.</p>
+                    <h4 class="h4 clear-blue">Configurar E-mail</h4>
+                    <p class="definicion dark-mode-p">El proceso para la configuración del correo
+                        e.<sup>co</sup> será parecido al paso anterior.
+                    </p>
+                    <p class="definicion dark-mode-p">Para escribir símbolos como la <strong
+                            class="strong clear-blue">@</strong>:<br>
+                        1º- Click derecho del ratón sobre la propia terminal => 2º- Options... =>
+                        3º- Keys => 4º- Marca la casilla 'Crtl+LeftAlt is AltGr'.
+                        Por último, haz click en 'Apply' y después en 'Save'.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="comando">$ git config --global user.email "miemail@.123"</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Sustituye esta dirección de correo electrónico
+                        por la que quieras. Cuando abras una cuenta en Github deberás proporcionar
+                        una dirección de email para autentificar tus datos y para que puedas
+                        realizar tus trabajos con normalidad.
+                    </p>
+                    <p class="definicion dark-mode-p">Tras estos pasos, podrás comprobar que se ha
+                        creado un archivo <strong class="strong clear-blue">.gitconfig</strong> en
+                        la siguiente ruta:
+                        <strong class="strong clear-blue">C:\Users\Nombre</strong> con los datos que
+                        has introducido. (Nombre: El que tengas establecido).
+                    </p>
+                </article>
+            </section>
+            <section id="parte-2" class="section">
+                <h2 class="h2"><span>Parte 2</span><br>Crear Carpetas Para Repositorios</h2>
+                <p class="definicion dark-mode-p">Para no hacer algo complicado el trabajo con Git
+                    Bash al principio, vamos a crear una carpeta en el escritorio del dispositivo.
+                </p>
+                <article class="article">
+                    <h3 class="h3">Acceder A La Ruta Del Escritorio</h3>
+                    <p class="definicion dark-mode-p"><span
+                            class="resaltar dark-blue"><i>Recuerda</i></span>: El símbolo '$'
+                        (Dólar) aparecerá por defecto en los pasos que vayamos efectuando en la
+                        terminal. Si quieres, copia los ejemplos de código que necesites.
+                    </p>
+                    <p class="definicion dark-mode-p">Copia solo las líneas con el texto en color
+                        blanco.</p>
+                    <p class="definicion dark-mode-p">Escribe <strong class="strong clear-blue">cd</strong> 
+                        en la terminal y haz click.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"></span><span class="ruta">~</span>
+                            <span class="comando">$ cd</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">De esta manera te situarás en la raiz del
+                        directorio, en el punto de inicio desde el cual podrás acceder a cualquier
+                        carpeta o archivo que se encuentre en tu dispositivo.
+                    </p>
+                    <p class="definicion dark-mode-p">A partir de aquí iremos utilizando comandos
+                        muy sencillos de ejecutar y fáciles de recordar.
+                    </p>
+                    <h4 class="h4 clear-blue">Crear Carpetas</h4>
+                    <p class="definicion dark-mode-p">Cuando tengas soltura con la terminal, podrás
+                        crear repositorios donde estimes oportuno. Ahora vamos a lo más sencillo.
+                        Para ello escribe por primera vez <strong class="strong clear-blue">ls</strong> y haz click.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~</span>
+                            <span class="comando">$ ls</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Cuando hayas hecho el correspondiente click,
+                        aparecerán en pantalla todas las carpetas, archivos y rutas existentes en tu
+                        ordenador.
+                    </p>
+                    <p class="definicion dark-mode-p">Ahora nos interesa la ruta hacia el
+                        escritorio. Ésta será <strong class="strong clear-blue">Desktop</strong>.
+                    </p>
+                    <p class="definicion dark-mode-p"><strong class="strong clear-blue">cd</strong>
+                        significa "Change Directory", o sea, cambiar de directorio.
+                    </p>
+                    <p class="definicion dark-mode-p">Siempre podrás usar <strong class="strong clear-blue">ls</strong>
+                        para saber qué elementos hay en cada ruta que vayas recorriendo.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~</span>
+                            <span class="comando">$ cd Desktop/</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Nos encontramos en el escritorio (~/Desktop).
+                        Veamos cómo crear una carpeta:
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ mkdir "Nombre Carpeta"</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p"><strong
+                            class="strong clear-blue">mkdir</strong> es la abreviatura de "Make
+                        Directory" = Hacer / Construir Directorio.
+                    </p>
+                    <p class="definicion dark-mode-p">Haz click y comprueba que la carpeta creada
+                        con el nombre que introdujiste se encuentra en el escritorio de tu dispositivo.
+                    </p>
+                    <p class="definicion dark-mode-p">Las comillas nos permiten ecribir nombres de
+                        referencia, como los de las carpetas, con espacios de separación entre
+                        palabras. (También puedes introducir números). También se pueden poner guiones 
+                        entre palabras; Por buenas prácticas, lo más recomendable es que usemos siempre las comillas.
+                    </p>
+                    <h4 class="h4 clear-blue">Cómo Eliminar Carpetas</h4>
+                    <p class="definicion dark-mode-p">Si te has equivocado escribiendo el nombre que
+                        quieres darle a la carpeta o has cometido algún error ortográfico, no te
+                        preocupes. Puedes eliminarla con
+                        <strong class="strong clear-blue">rmdir</strong>, que quiere decir 'remove
+                        directory'; En español podríamos decir 'remover directorio', para retenerlo
+                        mejor en nuestra memoria.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ rmdir "Nombre Carpeta"</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Vuelve a crear la carpeta como hiciste anteriormente.
+                    </p>
+                </article>
+                <article class="article">
+                    <h3 class="h3">Comandos Que Servirán Como Orientación</h3>
+                    <p class="definicion dark-mode-p">Ya hemos visto algunos comandos que nos han
+                        servido para acceder a determinadas rutas y saber qué encontrábamos dentro de ellas.
+                    </p>
+                    <h4 class="h4 clear-blue">Retroceder Hacia La Ruta Anterior</h4>
+                    <p class="definicion dark-mode-p">Con el siguiente comando podremos retroceder un paso. 
+                        Nos servirá para movernos con mayor soltura por la terminal o por 
+                        si nos hemos equivocado de ruta: (deja un espacio entre 'cd' y los dos puntos).
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ cd ..</span>
+                        </code>
+                    </pre>
+                    <h4 class="h4 clear-blue">Reconocer La Ruta Actual</h4>
+                    <p class="definicion dark-mode-p">Para saber dónde estamos situados y estar
+                        seguros de que vamos a trabajar en la carpeta o archivo deseado:
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ pwd</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">En este caso puede resultar demasiado obvio,
+                        pues no hemos accedido a rutas como carpetas que se encuentran dentro de
+                        otras carpetas y que, a su vez, contienen varios archivos. etc.
+                    </p>
+                    <p class="definicion dark-mode-p">El símbolo <strong
+                            class="strong clear-blue">~</strong> (virgulilla), sirve como "punto de
+                        referencia" de los movimientos que vamos realizando por medio de Git Bash. A 
+                        su derecha irán apareciendo los elementos que componen la ruta que estamos recorriendo. 
+                    </p>
+                    <h4 class="h4 clear-blue">Limpiar La Terminal</h4>
+                    <p class="definicion dark-mode-p">Si necesitas ver con mayor comodidad lo que va
+                        apareciendo en la pantalla, puedes limpiarla escribiendo
+                        <strong class="strong clear-blue">clear</strong> y dando click. No perderás
+                        nada del trabajo que hayas realizado hasta el momento.
+                    </p>
+                    <p class="definicion dark-mode-p">Arriba, en la terminal, tendrás disponible una
+                        línea de código para saber dónde estabas trabajando antes de limpiar la pantalla.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ clear</span>
+                        </code>
+                    </pre>
+                    <h4 class="h4 clear-blue">Volver A La Raiz De Contenidos Del Dispositivo</h4>
+                    <p class="definicion dark-mode-p">Ya hemos visto este comando al principio de
+                        este tutorial, pero es bueno recordarlo para empezar de nuevo y realizar las
+                        pruebas necesarias
+                        para tener bajo control todo lo aprendido hasta ahora:</p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ cd</span>
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <section id="parte-3" class="section">
+                <h2 class="h2"><span>Parte 3</span><br>Interacción Entre Git Bash Y Visual Studio Code</h2>
+                <p class="definicion dark-mode-p">Hasta ahora hemos trabajado solo con la
+                    terminal de Git Bash. Para que veamos la progresión de nuestro proyecto
+                    trabajaremos en paralelo con Visual Studio Code.
+                </p>
+                <article class="article">
+                    <h3 class="h3">Primeros Comandos</h3>
+                    <p class="definicion dark-mode-p">Ya sabemos que debemos utilizar 
+                        <strong class='strong clear-blue'>cd</strong> para cambiar de directorio y, a 
+                        continuación, la ruta de la carpeta que nos interesa.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop</span>
+                            <span class="comando">$ cd "Nombre Carpeta"</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Haz click para tener dicha carpeta como ruta principal para 
+                        poder crear archivos y carpetas. Luego escribe <strong class="strong clear-blue">ls</strong>.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span>
+                            <span class="comando">$ ls</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Al hacer click verás que la carpeta está vacía.</p>
+                    <h4 class="h4 clear-blue">Abrir El Proyecto En Visual Studio Code Desde Git Bash</h4>
+                    <p class="definicion dark-mode-p">Empecemos con la parte más interesante y 
+                        entretenida de este tutorial. Para ello solo tienes que escribir 
+                        <strong class="strong clear-blue">code .</strong> y hacer click.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span>
+                            <span class="comando">$ code .</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Pero, ¿Cómo vamos a "inicializar" el repositorio?. No hay ningún  
+                        archivo ni carpetas aún.
+                    </p>
+                    <h4 class="h4 clear-blue">Inicializar Repositorio</h4>
+                    <p class="definicion dark-mode-p">He puesto <span class="clear-blue">Inicializar</span> 
+                        entre comillas porque es un verbo muy utilizado en el mundo 
+                        de la programación y que, al principio, puede resultar un poco intimidatorio.
+                    </p>
+                    <p class="definicion dark-mode-p">Es algo tan sencillo como escribir 
+                        <strong class="strong clear-blue">git init</strong>, sin perder nunca de vista que estamos 
+                        en la raiz del proyecto.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span>
+                            <span class="comando">$ git init</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Veamos primero qué aparece debajo del propio comando que 
+                        acabamos de ejecutar:
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span>
+                            <span class="comando">$ git init</span>
+                            <span class="comando">Initialized empty Git repository in C:/Users/Nombre/Desktop/Nombre Carpeta</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Se puede traducir como "inicializado el 
+                        repositorio vacío de Git en...", seguido por la ruta completa. 
+                    </p>
+                    <p class="definicion dark-mode-p">En segundo lugar, comprobaremos cómo se denomina 
+                        la rama principal de todo este repositorio: <strong class="strong clear-blue">(master)</strong>.</p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(master)</span>
+                            <span class="comando">$ </span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">La palabra <strong class="strong clear-blue">master</strong> en inglés tiene un sentido, entre otros, 
+                        de "dueño" o "amo", por lo cual la mayoría de usuarios de <em>Git</em> y <em>Github</em> 
+                        optamos por el término <strong class="strong clear-blue">main</strong>, en español "<em>principal</em>".
+                    </p>
+                    <h4 class="h4 clear-blue">Cómo Cambiar El Nombre De La Rama Principal</h4>
+                    <p class="definicion dark-mode-p">Por los motivos ya citados, y si te parece bien, 
+                        vamos a cambiar el nombre de "master" a "main".
+                    </p>
+                    <p class="definicion dark-mode-p">Para ello escribimos el comando 
+                        <strong class="strong clear-blue">git branch -m main</strong>
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(master)</span>
+                            <span class="comando">$ git branch -m main</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Dando click tendremos la rama principal con el nombre
+                        <strong class="strong clear-blue">main</strong>.
+                    </p>
+                    <h4 class="h4 clear-blue">Crear Primer Archivo Desde Git Bash</h4>
+                    <p class="definicion dark-mode-p">A partir del siguiente comando podremos ver los 
+                        primeros cambios que se producirán en Visual Studio Code.
+                    </p>
+                    <p class="definicion dark-mode-p">
+                        Con <strong class="strong clear-blue">touch</strong> seguido 
+                        por el tipo de archivo con el que quieras trabajar. 
+                    </p>
+                    <p class="definicion dark-mode-p">
+                        En mi caso voy a crear un archivo .html: <strong class="strong clear-blue">touch index.html</strong>. 
+                        En este caso, el nombre del archivo completo no va entre comillas. 
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ touch index.html</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">
+                        En la siguiente imagen comprobaremos qué tenemos en el editor de código.
+                    </p>
+                    <img class="img-x" src="./imagenes/Primer Archivo.png"
+                        alt="Primer Archivo En Visual Studio Code" />
+                    <p class="definicion dark-mode-p">
+                        <strong class="strong clear-blue">U</strong> significa "No Rastreado". En el siguiente 
+                        apartado veremos cómo completar cada tarea.
+                    </p>
+                </article>
+            </section>
+            <section id="final" class="section">
+                <h2 class="h2"><span>Parte 4</span><br>Comandos Para El Control De La Rama 'main'</h2>
+                <p class="definicion dark-mode-p">Este tutorial está dedicado al aprendizaje 
+                    de Git usando Git Bash. Por tal razón, vamos a prescindir de Visual Studio Code por el momento.   
+                </p>
+                <article class="article">
+                    <h3 class="h3">Cómo Conocer El Estado De La Rama (main)</h3>
+                    <p class="definicion dark-mode-p">Para no provocar el caos en nuestro proyecto, 
+                        tenemos varios comandos que nos permiten controlar el trabajo hasta ahora realizado. 
+                    </p>
+                    <h4 class="h4 clear-blue">Editar Tareas Incompletas</h4>
+                    <p class="definicion dark-mode-p">Con <strong class="strong clear-blue">git status</strong> 
+                        sabremos si vamos haciendo correctamente nuestro trabajo.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ git status</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Recuerda que habíamos creado el archivo index.html, el cual 
+                        aparecía en el editor de código como archivo pendiente de ser 'reconocido'. 
+                    </p>
+                    <p class="definicion dark-mode-p">Observa cómo nos advierte la terminal de Git Bash de que  
+                        dicho archivo aún no está rastreado.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ git status</span>
+                            <span class="comando">On branch main</span>
+                            <span class="comando">No commits yet</span>
+                            <span class="comando">Untracked files:</span>
+                            <span class="comando">&nbsp;&nbsp;(use "git add &lt;file&gt;..." to include in what will be committed)</span>
+                            <span class="untracked-file">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html</span>
+                            <span class="comando">nothing added to commit but untracked files present (use "git add" to track)</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Veamos de qué nos advierte este mensaje: En primer lugar, en la rama 'main' 
+                        no hay todavía ningún <strong class="strong clear-blue">commit</strong>; después nos informa de los archivos 
+                        que no han sido rastreados. Vemos en rojo el archivo al que se refiere. Si existieran más acciones por terminar 
+                        saldrían reflejadas de la misma manera. 
+                    </p>
+                    <p class="definicion dark-mode-p">Lo vamos a solucionar en el siguiente punto.</p>
+                    <h4 class="h4 clear-blue">git add</h4>
+                    <p class="definicion dark-mode-p">Al final del anterior mensaje en la consola de Git Bash 
+                        leemos <strong class="strong clear-blue">(use "git add" to track).</strong>
+                    </p>
+                    <p class="definicion dark-mode-p">Ahora debemos utilizar <strong class="strong clear-blue">git add index.html</strong> 
+                        para rastrear o reconocer el archivo anteriormente creado o modificado.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ git add index.html</span>
+                        </code>
+                    </pre>
+                </article>
+                <article class="article">
+                    <h3 class="h3">Comandos Para Finalizar Tareas</h3>
+                    <p class="definicion dark-mode-p">¿Recuerdas que dentro del mensaje tras 
+                        el git status nos refería <strong class="strong clear-blue">No commits yet</strong>?.
+                    </p>
+                    <p class="definicion dark-mode-p">Aún resta hacer un <em>commit</em> para poder 
+                        realizar la primera “fotografía”. (Commit = Ingresar, internar, remitir).
+                    </p>
+                    <h4 class="h4 clear-blue">git commit</h4>
+                    <p class="definicion dark-mode-p">Este comando nos servirá para crear un mensaje que nos 
+                        permita identificar y recordar el porqué de la existencia del archivo creado.  
+                    </p>
+                    <p class="definicion dark-mode-p">Para evitar cualquier tipo de confusión, nos vamos a 
+                        limitar a usar el mínimo número de comandos. Hay varios conceptos a tener en cuenta
+                        en el futuro en los que podrás profundizar, una vez tengas controlado este tutorial básico.
+                    </p>
+                    <p class="definicion dark-mode-p">El comando a usar es 
+                        <strong class="strong clear-blue">git commit -m "mensaje"</strong>.
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ git commit -m "Mensaje que quieras"</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">Una vez ejecutado, obtendremos la siguiente información:
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ git commit -m "Mensaje que quieras"</span>
+                            <span class="comando">[main (root-commit) ef53915] Mensaje que quieras</span>
+                            <span class="comando">&nbsp;1 file changed, 0 insertions(+), 0 deletions(-)</span>
+                            <span class="comando">&nbsp;create mode 100644 index.html</span>
+                        </code>
+                    </pre>
+                    <h4 class="h4 clear-blue">Comprobar Éxito Final</h4>
+                    <p class="definicion dark-mode-p">¿Cómo podemos saber si todo ha salido bien?.
+                        Lo habrás adivinado: Con otro git status. 
+                    </p>
+                    <pre>
+                        <code>
+                            <span class="dispositivo">Nombre@LAPTOP-KLFF86</span> <span class="sistema">MINGW64</span> <span class="simbolos"><span class="ruta">~/Desktop/Nombre Carpeta</span> <span class="nombre-rama">(main)</span>
+                            <span class="comando">$ git status</span>
+                            <span class="comando">on branch main</span>
+                            <span class="comando">nothing to commit, working tree clean</span>
+                        </code>
+                    </pre>
+                    <p class="definicion dark-mode-p">
+                        <strong class="strong clear-blue">on branch main</strong>, es decir, 
+                        en la rama principal de nuestro proyecto, <strong class="strong clear-blue">nothing to commit, working tree clean</strong>, 
+                        nada quedará sin su correspondiente commit y que estamos trabajando con el "árbol" limpio.
+                    </p>
+                    <h4 class="h4 clear-blue">Repite Los Pasos Dados</h4>
+                    <p class="definicion dark-mode-p">Para mantener frescos los conocimientos sobre Git es recomendable practicar con todos 
+                        los comandos que he considerado los más básicos para comenzar a aprender y manejar Git.    
+                    </p>
+                    <p class="definicion dark-mode-p">
+                        Tómalo con calma y en ningún momento tengas el <em>sentimiento de frustración</em> que pueden crear en nosotros  
+                        el aprendizaje de nuevas materias, incluso de las que eran totalmente desconocidas por principiantes como nosotros. 
+                    </p>
+                </article>
+            </section>
+            <!-- <div class="theme-div" id="theme-switch-container">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div> -->
+        </main>
+        <footer class="footer">
+            <p class="texto-footer">
+                Configura el código a tu gusto. Puedes cambiar colores, tamaños y todo 
+                lo que te apetezca para hacer la página más accesible a tus necesidades.    
+            </p>
+            <p class="texto-footer">Si te ha gustado este tutorial haz 
+                click en la estrella en mi Github.
+            </p>
+            <p class="texto-footer">Muchas gracias y hasta pronto!</p>
+            <div class="boton-subir">
+                <a href="#">🚀</a>
+            </div>
+        </footer>
+        <script src="./javascript/dark-mode.js"></script>
+    </body>
+
+</html>
