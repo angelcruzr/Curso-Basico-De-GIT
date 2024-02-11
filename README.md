@@ -1,6 +1,6 @@
 # Curso De Git, Nivel Básico
 
-[![Git](https://img.shields.io/badge/style=for-the-badge&logo=git&logoColor=white&labelColor=101010)](https://git-scm.com/)
+[![Git](https://img.shields.io/badge/Git-2.37+-f14e32?style=for-the-badge&logo=git&logoColor=white&labelColor=101010)](https://git-scm.com/)
 
 Este Curso Consta De Cuatro Partes, En Las Cuales Irán  Apareciendo Los **Comandos Más Básicos**
 Para Ir Aprendiendo Git De Manera Progresiva Y Fácil.  
